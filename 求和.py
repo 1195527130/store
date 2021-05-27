@@ -1,13 +1,9 @@
-a1 = int(input("请输入第一个数："))
-a2 = int(input("请输入第二个数："))
-a3 = int(input("请输入第三个数："))
-a4 = int(input("请输入第四个数："))
-a5 = int(input("请输入第五个数："))
-a6 = int(input("请输入第六个数："))
-a7 = int(input("请输入第七个数："))
-a8 = int(input("请输入第八个数："))
-a9 = int(input("请输入第九个数："))
-a10 = int(input("请输入第十个数："))
-print("最大数为：",max([a1,a2,a3,a4,a5,a6,a7,a8,a9,a10]))
-print("总和为：",a1+a2+a3+a4+a5+a6+a7+a8+a9+a10)
-print("平均数为：",(a1+a2+a3+a4+a5+a6+a7+a8+a9+a10)/10)
+a = [0]*10
+i = 0
+while i < 10 :
+    a[i] = int(input("输入一个数："))
+    i = i + 1
+
+print("总和为：",sum(a))
+print("最大值为：",max(a))
+print("平均值为：",(sum(a)/10))
