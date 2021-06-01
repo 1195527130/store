@@ -39,7 +39,7 @@ while True :
             print("输入的商品编号不存在，请重新输入！")
         elif (num == 1 or num == 2) and (flag >= 1 and flag <= 6) :
             if salary >= shop[num][1] * 0.8 :
-                mycar.append(shop[num])
+                mycar.append([shop[num][0],shop[num][1] * 0.8])
                 salary = salary - shop[num][1] * 0.8
                 flag = 101
                 print("购买成功，您的余额还有：",salary,"元!")
@@ -47,8 +47,8 @@ while True :
                 print("您的余额不足，购买失败！")
         elif (num == 3 or num == 4) and (flag > 6 and flag <= 10) :
             if salary >= shop[num][1] * 0.7 :
-                mycar.append(shop[num])
-                salary = salary - shop[num][1] * 0.8
+                mycar.append([shop[num][0],shop[num][1] * 0.7])
+                salary = salary - shop[num][1] * 0.7
                 flag = 101
                 print("购买成功，您的余额还有：",salary,"元!")
             else :
