@@ -27,8 +27,10 @@ driver.quit()
 
 time.sleep(10)
 for i in range(1,5) :
-  TouchAction(driver).press(x=540, y=1459).move_to(x=561, y=499).release().perform()
-  TouchAction(driver).wait(10000)
+  # TouchAction(driver).press(x=540, y=1459).move_to(x=561, y=499).release().perform()
+  driver.swipe(540,1300,561,499,500)
+  time.sleep(3)
+  # TouchAction(driver).wait(10000)
 
 driver.quit()
 
